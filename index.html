@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI/ML Automation Roadmap</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <p class="topbar-credit">Designed by Arvind Saini</p>
+      <nav class="topbar-links" aria-label="Profile links">
+        <a href="https://github.com/arvind10799" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/arvind-saini-703596398" target="_blank" rel="noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+  </header>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Roadmap sections">
+      <div class="brand-block">
+        <p class="eyebrow">Study Guide</p>
+        <h1>AI/ML Automation Roadmap</h1>
+        <p class="lede">A clearer, more detailed version of your PDF roadmap with focus areas, outcomes, and hands-on ideas.</p>
+      </div>
+
+      <label class="search-bar" for="searchInput">
+        <span class="search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M10.5 4a6.5 6.5 0 1 0 4.03 11.6l4.43 4.43 1.41-1.41-4.43-4.43A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"></path>
+          </svg>
+        </span>
+        <input id="searchInput" type="search" placeholder="Search topics, tools, or projects">
+      </label>
+
+      <div class="sidebar-meta">
+        <div>
+          <span class="meta-label">Stages</span>
+          <strong id="stageCount">10</strong>
+        </div>
+        <div>
+          <span class="meta-label">Current focus</span>
+          <strong id="currentFocus">Foundations</strong>
+        </div>
+      </div>
+
+      <nav id="stageNav" class="stage-nav"></nav>
+    </aside>
+
+    <main class="content">
+      <section class="hero-panel">
+        <div>
+          <p class="eyebrow">Progression</p>
+          <h2>From Python basics to production-scale AI systems</h2>
+          <p class="hero-copy">
+            Move stage by stage, understand what each topic is for, and pick a practical output before jumping ahead.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <article>
+            <span class="stat-value" id="visibleStageCount">10</span>
+            <span class="stat-label">Visible stages</span>
+          </article>
+          <article>
+            <span class="stat-value">3</span>
+            <span class="stat-label">Core habits</span>
+          </article>
+          <article>
+            <span class="stat-value">1</span>
+            <span class="stat-label">Roadmap path</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="habit-strip" aria-label="Learning habits">
+        <article>
+          <h3>Learn</h3>
+          <p>Understand the concept in plain words before memorizing terms.</p>
+        </article>
+        <article>
+          <h3>Build</h3>
+          <p>Create a small working project at every stage so knowledge sticks.</p>
+        </article>
+        <article>
+          <h3>Connect</h3>
+          <p>Link ML, APIs, data storage, and automation into one practical system.</p>
+        </article>
+      </section>
+
+      <section class="layout-grid">
+        <section class="roadmap-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Roadmap</p>
+              <h2>Stage Breakdown</h2>
+            </div>
+            <button id="expandToggle" class="icon-button" type="button" title="Expand or collapse all stages" aria-label="Expand or collapse all stages">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M7 10h10v2H7zm0 4h10v2H7zm0-8h10v2H7z"></path>
+              </svg>
+            </button>
+          </div>
+          <div id="roadmapList" class="roadmap-list"></div>
+        </section>
+
+        <aside class="detail-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Selected Stage</p>
+              <h2 id="detailTitle">1. Foundations</h2>
+            </div>
+          </div>
+
+          <div id="detailContent" class="detail-content"></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <template id="stageCardTemplate">
+    <article class="stage-card">
+      <button class="stage-summary" type="button">
+        <div class="summary-copy">
+          <span class="stage-chip"></span>
+          <h3></h3>
+          <p class="stage-goal"></p>
+        </div>
+        <span class="summary-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="m9 6 6 6-6 6"></path>
+          </svg>
+        </span>
+      </button>
+      <div class="stage-body">
+        <div class="body-grid">
+          <div>
+            <h4>Topics</h4>
+            <ul class="topic-list"></ul>
+          </div>
+          <div>
+            <h4>Focus</h4>
+            <p class="stage-explainer"></p>
+          </div>
+          <div>
+            <h4>Build This</h4>
+            <p class="stage-project"></p>
+          </div>
+          <div>
+            <h4>Ready When</h4>
+            <p class="stage-ready"></p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
